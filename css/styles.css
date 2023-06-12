@@ -2,6 +2,10 @@ h1 {
   color: blue;
 }
 
+body {
+  font-family: system-ui;
+}
+
 h2 {
   font-style: italic;
   text-align: center;

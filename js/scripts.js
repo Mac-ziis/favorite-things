@@ -17,24 +17,33 @@ document.getElementById("default").addEventListener("click", function onclick() 
   document.body.style.fontSize = "20px";
 });
 
-
-// var link = document.getElementById('getNumber');
-// link.onclick = getNumber;
-
-// function getNumber() {
-//   var minNumber = 0;
-//   var maxNumber = 100;
-//   var randomNumber = Math.floor(Math.random() * (maxNumber + 1) + minNumber);
-//   $('#myNumber').html(randomNumber);
-//   return false;
-// };
-
 let generate = document.getElementById('btn');
 generate.addEventListener('click', () => {
     let min = document.getElementById('min').value;
     let max = document.getElementById('max').value;
     let random_num= Math.floor(Math.random()*(max-min) + +min);
     document.getElementById('output').innerHTML = ` =  ${random_num}`;
-})    
+});    
 
+const setBg = () => {
+  const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+  document.body.style.backgroundColor = "#" + randomColor;
+  color.innerHTML = "#" + randomColor;
+};
+
+btn.addEventListener("click", setBg);
+setBg();
+const setFc = () => {
+  const randomFont = Math.floor(Math.random() * 16777215).toString(16);
+  document.body.style.color = "#" + randomFont;
+  color.innerHTML = "#" + randomFont;
+}
+
+btn.addEventListener("click", setFc);
+setFc();
+
+// let body = document.querySelector("body");
+// body.onmouseover = function() {
+//   document.body.style.backgroundColor = "#" + randomcolor;
+// }
 }
